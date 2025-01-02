@@ -154,13 +154,14 @@ nav a:hover {
 
 .calendar-header span {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  color: #333; /* Ensures the month and year text is always visible */
 }
 
 /* Calendar Grid */
 .calendar-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
   grid-gap: 10px;
   text-align: center;
   font-size: 1.1rem;
@@ -171,6 +172,7 @@ nav a:hover {
   padding: 10px;
   background-color: #f4f7fc;
   border-radius: 8px;
+  color: #333; /* Ensure the day names are visible */
 }
 
 .calendar-grid .date {
@@ -178,16 +180,30 @@ nav a:hover {
   cursor: pointer;
   border-radius: 8px;
   transition: background-color 0.2s ease;
+  color: #333; /* Ensure all dates have visible text */
+  background-color: #fff; /* Default background color for all dates */
+}
+
+/* Styling for active dates (current month) */
+.calendar-grid .date.active {
+  background-color: #2d3a7f; /* Active dates have a blue background */
+  color: white; /* Active date text in white */
 }
 
 .calendar-grid .date:hover {
-  background-color: #2d3a7f;
-  color: white;
+  background-color: #2d3a7f; /* Change background color on hover */
+  color: white; /* Hover text color in white */
 }
 
+/* Inactive dates (previous/next month) */
 .calendar-grid .inactive {
-  color: #ccc; /* Inactive days (days from the previous or next month) */
-  cursor: not-allowed;
+  color: #ccc; /* Inactive days are gray */
+  background-color: #f4f7fc; /* Inactive days have a lighter background */
+  cursor: not-allowed; /* Disable clicking on inactive days */
+}
+
+.calendar-grid .inactive:hover {
+  background-color: #f4f7fc; /* Keep inactive days unchanged on hover */
 }
 
 /* Table for communication methods */
