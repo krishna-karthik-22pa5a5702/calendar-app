@@ -6,6 +6,7 @@ import Dashboard from './components/User/Dashboard';
 import CalendarView from './components/User/CalendarView';
 import Header from './components/Shared/Header';
 import Footer from './components/Shared/Footer';
+import './styles/styles.css';
 
 function App() {
   return (
