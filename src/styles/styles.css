@@ -55,7 +55,7 @@ nav {
   align-items: center;
   background-color: #fff;
   border: 1px solid #ccc;
-  padding: 40px;
+  padding: 30px;
   border-radius: 8px;
 }
 
@@ -130,11 +130,12 @@ nav a:hover {
   align-items: center;
   font-size: 1.5rem;
   margin-bottom: 20px;
+  color: black;
 }
 
 .calendar-header button {
   background-color: #2d3a7f;
-  color: #fff;
+  color: black;
   padding: 8px 16px;
   border-radius: 50%;
   font-size: 1.2rem;
@@ -172,7 +173,7 @@ nav a:hover {
   padding: 10px;
   background-color: #f4f7fc;
   border-radius: 8px;
-  color: #333; /* Ensure the day names are visible */
+  color: black; /* Ensure the day names are visible */
 }
 
 .calendar-grid .date {
