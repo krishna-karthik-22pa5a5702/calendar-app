@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Reset some basic styles for consistency */
 *,
 *::before,
@@ -18,6 +16,9 @@ body {
   margin: 0;
   padding: 0;
   transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Make sure body takes full height */
 }
 
 /* Centralized container */
@@ -25,6 +26,11 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  flex: 1; /* Allow container to take available space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Header Styling */
@@ -35,23 +41,105 @@ header {
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Add margin to separate header and content */
 }
 
 header h1 {
   font-size: 2.5rem;
 }
 
-/* Card layout for sections */
+/* Navbar Styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #2d3a7f;
+  color: #fff;
+}
+
+/* Card layout for sections (Companies and Communication Methods) */
 .card {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
+  margin-bottom: 20px;
 }
 
 .card:hover {
   transform: translateY(-5px);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Calendar Styles */
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px; /* Set a fixed height for the calendar */
+  margin: 20px 0;
+}
+
+.calendar {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.calendar h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Table for communication methods */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f4f7fc;
+  font-weight: bold;
 }
 
 /* Styling for buttons */
@@ -112,7 +200,10 @@ footer {
   font-size: 1rem;
   border-radius: 8px;
   margin-top: 30px;
-  align-items: bottom;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 /* Media Queries for responsiveness */
@@ -127,5 +218,23 @@ footer {
 
   .container {
     padding: 10px;
+  }
+
+  .calendar-container {
+    height: 300px;
+  }
+
+  .calendar {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 5px 0;
   }
 }
