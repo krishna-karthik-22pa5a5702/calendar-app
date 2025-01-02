@@ -1,3 +1,5 @@
+/* styles.css */
+
 /* Reset some basic styles for consistency */
 *,
 *::before,
@@ -16,9 +18,6 @@ body {
   margin: 0;
   padding: 0;
   transition: all 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Make sure body takes full height */
 }
 
 /* Centralized container */
@@ -26,202 +25,33 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  flex: 1; /* Allow container to take available space */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 /* Header Styling */
 header {
   background-color: #2d3a7f;
   color: #fff;
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px; /* Add margin to separate header and content */
 }
 
 header h1 {
   font-size: 2.5rem;
 }
 
-/* Navbar Styling */
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-  padding: 10px 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin: 0 5px;
-  transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-  background-color: #2d3a7f;
-  color: #fff;
-}
-
-/* Card layout for sections (Companies and Communication Methods) */
+/* Card layout for sections */
 .card {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
-  margin-bottom: 20px;
 }
 
 .card:hover {
   transform: translateY(-5px);
-}
-
-.card h2 {
-  margin-bottom: 15px;
-}
-
-.card p {
-  font-size: 1rem;
-  color: #555;
-}
-
-/* Calendar Styles */
-.calendar-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 400px; /* Set a fixed height for the calendar */
-  margin: 20px 0;
-}
-
-.calendar {
-  width: 100%;
-  max-width: 800px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.calendar h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Month and Year Navigation */
-.calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.calendar-header button {
-  background-color: #2d3a7f;
-  color: #000;
-  padding: 8px 16px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border: none;
-  transition: background-color 0.2s ease;
-  width: 40px; /* Set a fixed width for the button */
-  height: 40px; /* Set a fixed height for the button */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.calendar-header button:hover {
-  background-color: #243b71;
-}
-
-.calendar-header span {
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #000; /* Ensures the month and year text is always visible */
-}
-
-/* Calendar Grid */
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
-  grid-gap: 10px;
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-.calendar-grid .day {
-  font-weight: bold;
-  padding: 10px;
-  background-color: #f4f7fc;
-  border-radius: 8px;
-  color: #000; /* Ensure the day names are visible */
-}
-
-.calendar-grid .date {
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.2s ease;
-  color: #ccc; /* Ensure all dates have visible text */
-  background-color: #000; /* Default background color for all dates */
-}
-
-/* Styling for active dates (current month) */
-.calendar-grid .date.active {
-  background-color: #2d3a7f; /* Active dates have a blue background */
-  color: white; /* Active date text in white */
-}
-
-.calendar-grid .date:hover {
-  background-color: #2d3a7f; /* Change background color on hover */
-  color: white; /* Hover text color in white */
-}
-
-/* Inactive dates (previous/next month) */
-.calendar-grid .inactive {
-  color: #ccc; /* Inactive days are gray */
-  background-color: #f4f7fc; /* Inactive days have a lighter background */
-  cursor: not-allowed; /* Disable clicking on inactive days */
-}
-
-.calendar-grid .inactive:hover {
-  background-color: #f4f7fc; /* Keep inactive days unchanged on hover */
-}
-
-/* Table for communication methods */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-table th, table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: left;
-}
-
-table th {
-  background-color: #f4f7fc;
-  font-weight: bold;
 }
 
 /* Styling for buttons */
@@ -277,16 +107,11 @@ textarea {
 footer {
   background-color: #2d3a7f;
   color: #fff;
-  padding: 15px;
+  padding: 15px 0;
   text-align: center;
   font-size: 1rem;
   border-radius: 8px;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  margin-top: auto; /* Ensures footer is pushed to the bottom */
-  padding-bottom: 30px;
+  margin-top: 30px;
 }
 
 /* Media Queries for responsiveness */
@@ -301,23 +126,5 @@ footer {
 
   .container {
     padding: 10px;
-  }
-
-  .calendar-container {
-    height: 300px;
-  }
-
-  .calendar {
-    max-width: 100%;
-    padding: 15px;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav a {
-    margin: 5px 0;
   }
 }
