@@ -51,7 +51,7 @@ header h1 {
 /* Navbar Styling */
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -122,6 +122,34 @@ nav a:hover {
   font-size: 24px;
   color: #333;
   margin-bottom: 20px;
+}
+
+/* Month and Year Navigation */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.calendar-header button {
+  background-color: #2d3a7f;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.calendar-header button:hover {
+  background-color: #243b71;
+}
+
+.calendar-header span {
+  font-weight: bold;
 }
 
 /* Table for communication methods */
@@ -200,10 +228,12 @@ footer {
   font-size: 1rem;
   border-radius: 8px;
   margin-top: 30px;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
+  margin-top: auto; /* Ensures footer is pushed to the bottom */
+  padding-bottom: 30px;
 }
 
 /* Media Queries for responsiveness */
