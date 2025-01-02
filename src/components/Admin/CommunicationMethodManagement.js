@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const CommunicationMethodManagement = () => {
-  const [methods, setMethods] = useState([
+  const [methods] = useState([
     { name: 'LinkedIn Post', description: 'Post on LinkedIn', mandatory: true },
     { name: 'Email', description: 'Send an email', mandatory: false },
     { name: 'Phone Call', description: 'Make a phone call', mandatory: false },
