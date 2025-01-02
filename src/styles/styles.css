@@ -112,93 +112,6 @@ footer {
   font-size: 1rem;
   border-radius: 8px;
   margin-top: 30px;
-  align-items: bottom;
-}
-
-/* Calendar Container Styling */
-.calendar-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.calendar {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 1000px; /* Ensure it doesn't stretch too wide */
-}
-
-/* Month and Year Navigation */
-.calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.calendar-header button {
-  background-color: #2d3a7f;
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border: none;
-  transition: background-color 0.2s ease;
-}
-
-.calendar-header button:hover {
-  background-color: #243b71;
-}
-
-.calendar-header span {
-  font-weight: bold;
-}
-
-/* Table for Communication Methods */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-table, th, td {
-  border: 1px solid #ddd;
-}
-
-th, td {
-  padding: 10px;
-  text-align: center;
-}
-
-th {
-  background-color: #f4f7fc;
-}
-
-/* Navigation Links (Navbar) */
-nav {
-  display: flex;
-  justify-content: space-around;
-  background-color: #2d3a7f;
-  padding: 10px 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border: 2px solid transparent;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-nav a:hover {
-  background-color: #243b71;
-  border-color: #fff;
 }
 
 /* Media Queries for responsiveness */
@@ -213,14 +126,5 @@ nav a:hover {
 
   .container {
     padding: 10px;
-  }
-
-  .calendar-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .calendar-header button {
-    margin: 5px 0;
   }
 }
