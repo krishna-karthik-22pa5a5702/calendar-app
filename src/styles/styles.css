@@ -232,7 +232,7 @@ footer {
   left: 0;
   width: 100%;
   margin-top: auto; /* Ensures footer is pushed to the bottom */
-  margin-bottom: auto;
+  margin-bottom: 20px;
   padding-bottom: 30px;
 }
 
