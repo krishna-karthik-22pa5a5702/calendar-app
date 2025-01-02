@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';  // No changes here
 import CompanyManagement from './components/Admin/CompanyManagement';
 import CommunicationMethodManagement from './components/Admin/CommunicationMethodManagement';
 import Dashboard from './components/User/Dashboard';
@@ -13,6 +13,7 @@ function App() {
       <Header />
       <div className="container mx-auto p-4">
         <Routes>
+          {/* Notice the use of the "element" prop with JSX */}
           <Route path="/admin/companies" element={<CompanyManagement />} />
           <Route path="/admin/communications" element={<CommunicationMethodManagement />} />
           <Route path="/user/dashboard" element={<Dashboard />} />
